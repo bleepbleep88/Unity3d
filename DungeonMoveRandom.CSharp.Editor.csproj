@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D623D74-94D8-93E4-F4DF-9C385CEA4300}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Editor:5</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>5.2.2f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_2_2;UNITY_5_2;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_2_2;UNITY_5_2;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\UnityAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WP8.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WP8.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Metro.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Metro.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Tizen.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Tizen.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SamsungTV.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.SamsungTV.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WebGL.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.OSXStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-UnityScript">
+      <HintPath>Library\ScriptAssemblies\Assembly-UnityScript.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="DungeonMoveRandom.CSharp.csproj">
+      <Project>{987089CB-27F9-389F-C7D4-815092DD6C1A}</Project>
+      <Name>DungeonMoveRandom.CSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Editor\Randomr.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\DataFiles\Test\0001_Iron_Tail.xml" />
+    <None Include="Assets\Randy\0000_Nothing.xml" />
+    <None Include="Assets\Randy\0001_Iron_Tail.xml" />
+    <None Include="Assets\Randy\0002_Ice_Ball.xml" />
+    <None Include="Assets\Randy\0003_Yawn.xml" />
+    <None Include="Assets\Randy\0004_Lovely_Kiss.xml" />
+    <None Include="Assets\Randy\0005_Nightmare.xml" />
+    <None Include="Assets\Randy\0006_Morning_Sun.xml" />
+    <None Include="Assets\Randy\0007_Vital_Throw.xml" />
+    <None Include="Assets\Randy\0008_Dig.xml" />
+    <None Include="Assets\Randy\0009_Thrash.xml" />
+    <None Include="Assets\Randy\0010_Sweet_Scent.xml" />
+    <None Include="Assets\Randy\0011_Charm.xml" />
+    <None Include="Assets\Randy\0012_Rain_Dance.xml" />
+    <None Include="Assets\Randy\0013_Confuse_Ray.xml" />
+    <None Include="Assets\Randy\0014_Hail.xml" />
+    <None Include="Assets\Randy\0015_Aromatherapy.xml" />
+    <None Include="Assets\Randy\0016_Bubble.xml" />
+    <None Include="Assets\Randy\0017_Encore.xml" />
+    <None Include="Assets\Randy\0018_Cut.xml" />
+    <None Include="Assets\Randy\0019_Rage.xml" />
+    <None Include="Assets\Randy\0020_Super_Fang.xml" />
+    <None Include="Assets\Randy\0021_Pain_Split.xml" />
+    <None Include="Assets\Randy\0022_Torment.xml" />
+    <None Include="Assets\Randy\0023_String_Shot.xml" />
+    <None Include="Assets\Randy\0024_Swagger.xml" />
+    <None Include="Assets\Randy\0025_Snore.xml" />
+    <None Include="Assets\Randy\0026_Heal_Bell.xml" />
+    <None Include="Assets\Randy\0027_Screech.xml" />
+    <None Include="Assets\Randy\0028_Rock_Throw.xml" />
+    <None Include="Assets\Randy\0029_Rock_Smash.xml" />
+    <None Include="Assets\Randy\0030_Rock_Slide.xml" />
+    <None Include="Assets\Randy\0031_Weather_Ball.xml" />
+    <None Include="Assets\Randy\0032_Whirlpool.xml" />
+    <None Include="Assets\Randy\0033_Fake_Tears.xml" />
+    <None Include="Assets\Randy\0034_Sing.xml" />
+    <None Include="Assets\Randy\0035_Spite.xml" />
+    <None Include="Assets\Randy\0036_Air_Cutter.xml" />
+    <None Include="Assets\Randy\0037_SmokeScreen.xml" />
+    <None Include="Assets\Randy\0038_Pursuit.xml" />
+    <None Include="Assets\Randy\0039_DoubleSlap.xml" />
+    <None Include="Assets\Randy\0040_Mirror_Move.xml" />
+    <None Include="Assets\Randy\0041_Overheat.xml" />
+    <None Include="Assets\Randy\0042_Aurora_Beam.xml" />
+    <None Include="Assets\Randy\0043_Memento.xml" />
+    <None Include="Assets\Randy\0044_Octazooka.xml" />
+    <None Include="Assets\Randy\0045_Flatter.xml" />
+    <None Include="Assets\Randy\0046_Astonish.xml" />
+    <None Include="Assets\Randy\0047_Will_O_Wisp.xml" />
+    <None Include="Assets\Randy\0048_Return.xml" />
+    <None Include="Assets\Randy\0049_Grudge.xml" />
+    <None Include="Assets\Randy\0050_Strength.xml" />
+    <None Include="Assets\Randy\0051_Counter.xml" />
+    <None Include="Assets\Randy\0052_Flame_Wheel.xml" />
+    <None Include="Assets\Randy\0053_Flamethrower.xml" />
+    <None Include="Assets\Randy\0054_Odor_Sleuth.xml" />
+    <None Include="Assets\Randy\0055_Sharpen.xml" />
+    <None Include="Assets\Randy\0056_Double_Team.xml" />
+    <None Include="Assets\Randy\0057_Gust.xml" />
+    <None Include="Assets\Randy\0058_Harden.xml" />
+    <None Include="Assets\Randy\0059_Disable.xml" />
+    <None Include="Assets\Randy\0060_Razor_Wind.xml" />
+    <None Include="Assets\Randy\0061_Bide.xml" />
+    <None Include="Assets\Randy\0062_Crunch.xml" />
+    <None Include="Assets\Randy\0063_Bite.xml" />
+    <None Include="Assets\Randy\0064_Thunder.xml" />
+    <None Include="Assets\Randy\0065_ThunderPunch.xml" />
+    <None Include="Assets\Randy\0066_Endeavor.xml" />
+    <None Include="Assets\Randy\0067_Facade.xml" />
+    <None Include="Assets\Randy\0068_Karate_Chop.xml" />
+    <None Include="Assets\Randy\0069_Clamp.xml" />
+    <None Include="Assets\Randy\0070_Withdraw.xml" />
+    <None Include="Assets\Randy\0071_Constrict.xml" />
+    <None Include="Assets\Randy\0072_Brick_Break.xml" />
+    <None Include="Assets\Randy\0073_Rock_Tomb.xml" />
+    <None Include="Assets\Randy\0074_Focus_Energy.xml" />
+    <None Include="Assets\Randy\0075_Focus_Punch.xml" />
+    <None Include="Assets\Randy\0076_Giga_Drain.xml" />
+    <None Include="Assets\Randy\0077_Reversal.xml" />
+    <None Include="Assets\Randy\0078_SmellingSalt.xml" />
+    <None Include="Assets\Randy\0079_Spore.xml" />
+    <None Include="Assets\Randy\0080_Leech_Life.xml" />
+    <None Include="Assets\Randy\0081_Slash.xml" />
+    <None Include="Assets\Randy\0082_Silver_Wind.xml" />
+    <None Include="Assets\Randy\0083_Metal_Sound.xml" />
+    <None Include="Assets\Randy\0084_GrassWhistle.xml" />
+    <None Include="Assets\Randy\0085_Tickle.xml" />
+    <None Include="Assets\Randy\0086_Spider_Web.xml" />
+    <None Include="Assets\Randy\0087_Crabhammer.xml" />
+    <None Include="Assets\Randy\0088_Haze.xml" />
+    <None Include="Assets\Randy\0089_Mean_Look.xml" />
+    <None Include="Assets\Randy\0090_Cross_Chop.xml" />
+    <None Include="Assets\Randy\0091_Outrage.xml" />
+    <None Include="Assets\Randy\0092_Low_Kick.xml" />
+    <None Include="Assets\Randy\0093_AncientPower.xml" />
+    <None Include="Assets\Randy\0094_Synthesis.xml" />
+    <None Include="Assets\Randy\0095_Agility.xml" />
+    <None Include="Assets\Randy\0096_Rapid_Spin.xml" />
+    <None Include="Assets\Randy\0097_Icy_Wind.xml" />
+    <None Include="Assets\Randy\0098_Mind_Reader.xml" />
+    <None Include="Assets\Randy\0099_Cosmic_Power.xml" />
+    <None Include="Assets\Randy\0100_Sky_Attack.xml" />
+    <None Include="Assets\Randy\0101_Powder_Snow.xml" />
+    <None Include="Assets\Randy\0102_Follow_Me.xml" />
+    <None Include="Assets\Randy\0103_Meteor_Mash.xml" />
+    <None Include="Assets\Randy\0104_Endure.xml" />
+    <None Include="Assets\Randy\0105_Rollout.xml" />
+    <None Include="Assets\Randy\0106_Scary_Face.xml" />
+    <None Include="Assets\Randy\0107_Psybeam.xml" />
+    <None Include="Assets\Randy\0108_Psywave.xml" />
+    <None Include="Assets\Randy\0109_Psychic.xml" />
+    <None Include="Assets\Randy\0110_Psycho_Boost.xml" />
+    <None Include="Assets\Randy\0111_Hypnosis.xml" />
+    <None Include="Assets\Randy\0112_Uproar.xml" />
+    <None Include="Assets\Randy\0113_Water_Spout.xml" />
+    <None Include="Assets\Randy\0114_Signal_Beam.xml" />
+    <None Include="Assets\Randy\0115_Psych_Up.xml" />
+    <None Include="Assets\Randy\0116_Submission.xml" />
+    <None Include="Assets\Randy\0117_Recover.xml" />
+    <None Include="Assets\Randy\0118_Earthquake.xml" />
+    <None Include="Assets\Randy\0119_Nature_Power.xml" />
+    <None Include="Assets\Randy\0120_Lick.xml" />
+    <None Include="Assets\Randy\0121_Flail.xml" />
+    <None Include="Assets\Randy\0122_Tail_Whip.xml" />
+    <None Include="Assets\Randy\0123_Selfdestruct.xml" />
+    <None Include="Assets\Randy\0124_Stun_Spore.xml" />
+    <None Include="Assets\Randy\0125_Bind.xml" />
+    <None Include="Assets\Randy\0126_Shadow_Punch.xml" />
+    <None Include="Assets\Randy\0127_Shadow_Ball.xml" />
+    <None Include="Assets\Randy\0128_Charge.xml" />
+    <None Include="Assets\Randy\0129_Thunderbolt.xml" />
+    <None Include="Assets\Randy\0130_Mist.xml" />
+    <None Include="Assets\Randy\0131_Fissure.xml" />
+    <None Include="Assets\Randy\0132_ExtremeSpeed.xml" />
+    <None Include="Assets\Randy\0133_Extrasensory.xml" />
+    <None Include="Assets\Randy\0134_Safeguard.xml" />
+    <None Include="Assets\Randy\0135_Absorb.xml" />
+    <None Include="Assets\Randy\0136_Sky_Uppercut.xml" />
+    <None Include="Assets\Randy\0137_Skill_Swap.xml" />
+    <None Include="Assets\Randy\0138_Sketch.xml" />
+    <None Include="Assets\Randy\0139_Headbutt.xml" />
+    <None Include="Assets\Randy\0140_Double_Edge.xml" />
+    <None Include="Assets\Randy\0141_Sandstorm.xml" />
+    <None Include="Assets\Randy\0142_Sand_Attack.xml" />
+    <None Include="Assets\Randy\0143_Sand_Tomb.xml" />
+    <None Include="Assets\Randy\0144_Spark.xml" />
+    <None Include="Assets\Randy\0145_Swift.xml" />
+    <None Include="Assets\Randy\0146_Kinesis.xml" />
+    <None Include="Assets\Randy\0147_Smog.xml" />
+    <None Include="Assets\Randy\0148_Growth.xml" />
+    <None Include="Assets\Randy\0149_Sacred_Fire.xml" />
+    <None Include="Assets\Randy\0150_Sheer_Cold.xml" />
+    <None Include="Assets\Randy\0151_SolarBeam.xml" />
+    <None Include="Assets\Randy\0152_SonicBoom.xml" />
+    <None Include="Assets\Randy\0153_Fly.xml" />
+    <None Include="Assets\Randy\0154_Tackle.xml" />
+    <None Include="Assets\Randy\0155_Explosion.xml" />
+    <None Include="Assets\Randy\0156_Dive.xml" />
+    <None Include="Assets\Randy\0157_Fire_Blast.xml" />
+    <None Include="Assets\Randy\0158_Waterfall.xml" />
+    <None Include="Assets\Randy\0159_Muddy_Water.xml" />
+    <None Include="Assets\Randy\0160_Stockpile.xml" />
+    <None Include="Assets\Randy\0161_Slam.xml" />
+    <None Include="Assets\Randy\0162_Twister.xml" />
+    <None Include="Assets\Randy\0163_Bullet_Seed.xml" />
+    <None Include="Assets\Randy\0164_Twineedle.xml" />
+    <None Include="Assets\Randy\0165_Softboiled.xml" />
+    <None Include="Assets\Randy\0166_Egg_Bomb.xml" />
+    <None Include="Assets\Randy\0167_Faint_Attack.xml" />
+    <None Include="Assets\Randy\0168_Barrage.xml" />
+    <None Include="Assets\Randy\0169_Minimize.xml" />
+    <None Include="Assets\Randy\0170_Seismic_Toss.xml" />
+    <None Include="Assets\Randy\0171_Supersonic.xml" />
+    <None Include="Assets\Randy\0172_Taunt.xml" />
+    <None Include="Assets\Randy\0173_Moonlight.xml" />
+    <None Include="Assets\Randy\0174_Peck.xml" />
+    <None Include="Assets\Randy\0175_Arm_Thrust.xml" />
+    <None Include="Assets\Randy\0176_Horn_Attack.xml" />
+    <None Include="Assets\Randy\0177_Horn_Drill.xml" />
+    <None Include="Assets\Randy\0178_Wing_Attack.xml" />
+    <None Include="Assets\Randy\0179_Aerial_Ace.xml" />
+    <None Include="Assets\Randy\0180_Icicle_Spear.xml" />
+    <None Include="Assets\Randy\0181_Swords_Dance.xml" />
+    <None Include="Assets\Randy\0182_Vine_Whip.xml" />
+    <None Include="Assets\Randy\0183_Conversion.xml" />
+    <None Include="Assets\Randy\0184_Conversion_2.xml" />
+    <None Include="Assets\Randy\0185_Helping_Hand.xml" />
+    <None Include="Assets\Randy\0186_Iron_Defense.xml" />
+    <None Include="Assets\Randy\0187_Teleport.xml" />
+    <None Include="Assets\Randy\0188_ThunderShock.xml" />
+    <None Include="Assets\Randy\0189_Shock_Wave.xml" />
+    <None Include="Assets\Randy\0190_Quick_Attack.xml" />
+    <None Include="Assets\Randy\0191_Sweet_Kiss.xml" />
+    <None Include="Assets\Randy\0192_Thunder_Wave.xml" />
+    <None Include="Assets\Randy\0193_Zap_Cannon.xml" />
+    <None Include="Assets\Randy\0194_Block.xml" />
+    <None Include="Assets\Randy\0195_Howl.xml" />
+    <None Include="Assets\Randy\0196_Poison_Gas.xml" />
+    <None Include="Assets\Randy\0197_Toxic.xml" />
+    <None Include="Assets\Randy\0198_Poison_Fang.xml" />
+    <None Include="Assets\Randy\0199_PoisonPowder.xml" />
+    <None Include="Assets\Randy\0200_Poison_Sting.xml" />
+    <None Include="Assets\Randy\0201_Spike_Cannon.xml" />
+    <None Include="Assets\Randy\0202_Acid_Armor.xml" />
+    <None Include="Assets\Randy\0203_Take_Down.xml" />
+    <None Include="Assets\Randy\0204_Jump_Kick.xml" />
+    <None Include="Assets\Randy\0205_Bounce.xml" />
+    <None Include="Assets\Randy\0206_Hi_Jump_Kick.xml" />
+    <None Include="Assets\Randy\0207_Tri_Attack.xml" />
+    <None Include="Assets\Randy\0208_Dragon_Claw.xml" />
+    <None Include="Assets\Randy\0209_Trick.xml" />
+    <None Include="Assets\Randy\0210_Triple_Kick.xml" />
+    <None Include="Assets\Randy\0211_Drill_Peck.xml" />
+    <None Include="Assets\Randy\0212_Mud_Sport.xml" />
+    <None Include="Assets\Randy\0213_Mud_Slap.xml" />
+    <None Include="Assets\Randy\0214_Thief.xml" />
+    <None Include="Assets\Randy\0215_Amnesia.xml" />
+    <None Include="Assets\Randy\0216_Night_Shade.xml" />
+    <None Include="Assets\Randy\0217_Growl.xml" />
+    <None Include="Assets\Randy\0218_Slack_Off.xml" />
+    <None Include="Assets\Randy\0219_Surf.xml" />
+    <None Include="Assets\Randy\0220_Role_Play.xml" />
+    <None Include="Assets\Randy\0221_Needle_Arm.xml" />
+    <None Include="Assets\Randy\0222_Double_Kick.xml" />
+    <None Include="Assets\Randy\0223_Sunny_Day 1.xml" />
+    <None Include="Assets\Randy\0223_Sunny_Day.xml" />
+    <None Include="Assets\Randy\0224_Leer.xml" />
+    <None Include="Assets\Randy\0225_Wish.xml" />
+    <None Include="Assets\Randy\0226_Fake_Out.xml" />
+    <None Include="Assets\Randy\0227_Sleep_Talk.xml" />
+    <None Include="Assets\Randy\0228_Pay_Day.xml" />
+    <None Include="Assets\Randy\0229_Assist.xml" />
+    <None Include="Assets\Randy\0230_Heat_Wave.xml" />
+    <None Include="Assets\Randy\0231_Sleep_Powder.xml" />
+    <None Include="Assets\Randy\0232_Rest.xml" />
+    <None Include="Assets\Randy\0233_Ingrain.xml" />
+    <None Include="Assets\Randy\0234_Confusion.xml" />
+    <None Include="Assets\Randy\0235_Body_Slam.xml" />
+    <None Include="Assets\Randy\0236_Swallow.xml" />
+    <None Include="Assets\Randy\0237_Curse.xml" />
+    <None Include="Assets\Randy\0238_Frenzy_Plant.xml" />
+    <None Include="Assets\Randy\0239_Hydro_Cannon.xml" />
+    <None Include="Assets\Randy\0240_Hydro_Pump.xml" />
+    <None Include="Assets\Randy\0241_Hyper_Voice.xml" />
+    <None Include="Assets\Randy\0242_Hyper_Beam.xml" />
+    <None Include="Assets\Randy\0243_Superpower.xml" />
+    <None Include="Assets\Randy\0244_Steel_Wing.xml" />
+    <None Include="Assets\Randy\0245_Spit_Up.xml" />
+    <None Include="Assets\Randy\0246_DynamicPunch.xml" />
+    <None Include="Assets\Randy\0247_Guillotine.xml" />
+    <None Include="Assets\Randy\0248_ViceGrip.xml" />
+    <None Include="Assets\Randy\0249_Knock_Off.xml" />
+    <None Include="Assets\Randy\0250_Pound.xml" />
+    <None Include="Assets\Randy\0251_Razor_Leaf.xml" />
+    <None Include="Assets\Randy\0252_Baton_Pass.xml" />
+    <None Include="Assets\Randy\0253_Petal_Dance.xml" />
+    <None Include="Assets\Randy\0254_Splash.xml" />
+    <None Include="Assets\Randy\0255_BubbleBeam.xml" />
+    <None Include="Assets\Randy\0256_Doom_Desire.xml" />
+    <None Include="Assets\Randy\0257_Belly_Drum.xml" />
+    <None Include="Assets\Randy\0258_Barrier.xml" />
+    <None Include="Assets\Randy\0259_Light_Screen.xml" />
+    <None Include="Assets\Randy\0260_Scratch.xml" />
+    <None Include="Assets\Randy\0261_Hyper_Fang.xml" />
+    <None Include="Assets\Randy\0262_Ember.xml" />
+    <None Include="Assets\Randy\0263_Secret_Power.xml" />
+    <None Include="Assets\Randy\0264_Dizzy_Punch.xml" />
+    <None Include="Assets\Randy\0265_Bulk_Up.xml" />
+    <None Include="Assets\Randy\0266_Imprison.xml" />
+    <None Include="Assets\Randy\0267_FeatherDance.xml" />
+    <None Include="Assets\Randy\0268_Whirlwind.xml" />
+    <None Include="Assets\Randy\0269_Beat_Up.xml" />
+    <None Include="Assets\Randy\0270_Blizzard.xml" />
+    <None Include="Assets\Randy\0271_Stomp.xml" />
+    <None Include="Assets\Randy\0272_Blast_Burn.xml" />
+    <None Include="Assets\Randy\0273_Flash.xml" />
+    <None Include="Assets\Randy\0274_Teeter_Dance.xml" />
+    <None Include="Assets\Randy\0275_Crush_Claw.xml" />
+    <None Include="Assets\Randy\0276_Blaze_Kick.xml" />
+    <None Include="Assets\Randy\0277_Present.xml" />
+    <None Include="Assets\Randy\0278_Eruption.xml" />
+    <None Include="Assets\Randy\0279_Sludge.xml" />
+    <None Include="Assets\Randy\0280_Sludge_Bomb.xml" />
+    <None Include="Assets\Randy\0281_Glare.xml" />
+    <None Include="Assets\Randy\0282_Transform.xml" />
+    <None Include="Assets\Randy\0283_Poison_Tail.xml" />
+    <None Include="Assets\Randy\0284_Roar.xml" />
+    <None Include="Assets\Randy\0285_Bone_Rush.xml" />
+    <None Include="Assets\Randy\0286_Camouflage.xml" />
+    <None Include="Assets\Randy\0287_Covet.xml" />
+    <None Include="Assets\Randy\0288_Tail_Glow.xml" />
+    <None Include="Assets\Randy\0289_Bone_Club.xml" />
+    <None Include="Assets\Randy\0290_Bonemerang.xml" />
+    <None Include="Assets\Randy\0291_Fire_Spin.xml" />
+    <None Include="Assets\Randy\0292_Fire_Punch.xml" />
+    <None Include="Assets\Randy\0293_Perish_Song.xml" />
+    <None Include="Assets\Randy\0294_Wrap.xml" />
+    <None Include="Assets\Randy\0295_Spikes.xml" />
+    <None Include="Assets\Randy\0296_Magnitude.xml" />
+    <None Include="Assets\Randy\0297_Magical_Leaf.xml" />
+    <None Include="Assets\Randy\0298_Magic_Coat.xml" />
+    <None Include="Assets\Randy\0299_Mud_Shot.xml" />
+    <None Include="Assets\Randy\0300_Mach_Punch.xml" />
+    <None Include="Assets\Randy\0301_Protect.xml" />
+    <None Include="Assets\Randy\0302_Defense_Curl.xml" />
+    <None Include="Assets\Randy\0303_Rolling_Kick.xml" />
+    <None Include="Assets\Randy\0304_Substitute.xml" />
+    <None Include="Assets\Randy\0305_Detect.xml" />
+    <None Include="Assets\Randy\0306_Pin_Missile.xml" />
+    <None Include="Assets\Randy\0307_Water_Sport.xml" />
+    <None Include="Assets\Randy\0308_Water_Gun.xml" />
+    <None Include="Assets\Randy\0309_Mist_Ball.xml" />
+    <None Include="Assets\Randy\0310_Water_Pulse.xml" />
+    <None Include="Assets\Randy\0311_Fury_Attack.xml" />
+    <None Include="Assets\Randy\0312_Fury_Swipes.xml" />
+    <None Include="Assets\Randy\0313_Destiny_Bond.xml" />
+    <None Include="Assets\Randy\0314_False_Swipe.xml" />
+    <None Include="Assets\Randy\0315_Foresight.xml" />
+    <None Include="Assets\Randy\0316_Mirror_Coat.xml" />
+    <None Include="Assets\Randy\0317_Future_Sight.xml" />
+    <None Include="Assets\Randy\0318_Milk_Drink.xml" />
+    <None Include="Assets\Randy\0319_Calm_Mind.xml" />
+    <None Include="Assets\Randy\0320_Mega_Drain.xml" />
+    <None Include="Assets\Randy\0321_Mega_Kick.xml" />
+    <None Include="Assets\Randy\0322_Mega_Punch.xml" />
+    <None Include="Assets\Randy\0323_Megahorn.xml" />
+    <None Include="Assets\Randy\0324_Hidden_Power.xml" />
+    <None Include="Assets\Randy\0325_Metal_Claw.xml" />
+    <None Include="Assets\Randy\0326_Attract.xml" />
+    <None Include="Assets\Randy\0327_Mimic.xml" />
+    <None Include="Assets\Randy\0328_Frustration.xml" />
+    <None Include="Assets\Randy\0329_Leech_Seed.xml" />
+    <None Include="Assets\Randy\0330_Metronome.xml" />
+    <None Include="Assets\Randy\0331_Dream_Eater.xml" />
+    <None Include="Assets\Randy\0332_Acid.xml" />
+    <None Include="Assets\Randy\0333_Meditate.xml" />
+    <None Include="Assets\Randy\0334_Snatch.xml" />
+    <None Include="Assets\Randy\0335_Luster_Purge.xml" />
+    <None Include="Assets\Randy\0336_Leaf_Blade.xml" />
+    <None Include="Assets\Randy\0337_Recycle.xml" />
+    <None Include="Assets\Randy\0338_Reflect.xml" />
+    <None Include="Assets\Randy\0339_Refresh.xml" />
+    <None Include="Assets\Randy\0340_Revenge.xml" />
+    <None Include="Assets\Randy\0341_Dragon_Rage.xml" />
+    <None Include="Assets\Randy\0342_DragonBreath.xml" />
+    <None Include="Assets\Randy\0343_Dragon_Dance.xml" />
+    <None Include="Assets\Randy\0344_Ice_Punch.xml" />
+    <None Include="Assets\Randy\0345_Ice_Beam.xml" />
+    <None Include="Assets\Randy\0346_Fury_Cutter.xml" />
+    <None Include="Assets\Randy\0347_Comet_Punch.xml" />
+    <None Include="Assets\Randy\0348_Skull_Bash.xml" />
+    <None Include="Assets\Randy\0349_Lock_On.xml" />
+    <None Include="Assets\Randy\0350_Rock_Blast.xml" />
+    <None Include="Assets\Randy\0351_Cotton_Spore.xml" />
+    <None Include="Assets\Randy\0352_Struggle.xml" />
+    <None Include="Assets\Randy\0353_Aeroblast.xml" />
+    <None Include="Assets\Randy\0354_Volt_Tackle.xml" />
+    <None Include="Assets\Randy\0355_regular_attack.xml" />
+    <None Include="Assets\Randy\0356_is_watching.xml" />
+    <None Include="Assets\Randy\0357_Bide.xml" />
+    <None Include="Assets\Randy\0358_Revenge.xml" />
+    <None Include="Assets\Randy\0359_Avalanche.xml" />
+    <None Include="Assets\Randy\0360_Wide_Slash.xml" />
+    <None Include="Assets\Randy\0361____.xml" />
+    <None Include="Assets\Randy\0362____.xml" />
+    <None Include="Assets\Randy\0363_See_Trap.xml" />
+    <None Include="Assets\Randy\0364_Takeaway.xml" />
+    <None Include="Assets\Randy\0365_Rebound.xml" />
+    <None Include="Assets\Randy\0366_Bloop_Slash.xml" />
+    <None Include="Assets\Randy\0367_Switcher.xml" />
+    <None Include="Assets\Randy\0368_Blowback.xml" />
+    <None Include="Assets\Randy\0369_Warp.xml" />
+    <None Include="Assets\Randy\0370_Transfer.xml" />
+    <None Include="Assets\Randy\0371_Slow_Down.xml" />
+    <None Include="Assets\Randy\0372_Speed_Boost.xml" />
+    <None Include="Assets\Randy\0373_Searchlight.xml" />
+    <None Include="Assets\Randy\0374_Petrify.xml" />
+    <None Include="Assets\Randy\0375_Stay_Away.xml" />
+    <None Include="Assets\Randy\0376_Pounce.xml" />
+    <None Include="Assets\Randy\0377_Trawl.xml" />
+    <None Include="Assets\Randy\0378_Cleanse.xml" />
+    <None Include="Assets\Randy\0379_Observer.xml" />
+    <None Include="Assets\Randy\0380_Decoy_Maker.xml" />
+    <None Include="Assets\Randy\0381_Siesta.xml" />
+    <None Include="Assets\Randy\0382_Totter.xml" />
+    <None Include="Assets\Randy\0383_Two_Edge.xml" />
+    <None Include="Assets\Randy\0384_No_Move.xml" />
+    <None Include="Assets\Randy\0385_Escape.xml" />
+    <None Include="Assets\Randy\0386_Scan.xml" />
+    <None Include="Assets\Randy\0387_Power_Ears.xml" />
+    <None Include="Assets\Randy\0388_Drought.xml" />
+    <None Include="Assets\Randy\0389_Trap_Buster.xml" />
+    <None Include="Assets\Randy\0390_Wild_Call.xml" />
+    <None Include="Assets\Randy\0391_Invisify.xml" />
+    <None Include="Assets\Randy\0392_One_Shot.xml" />
+    <None Include="Assets\Randy\0393_HP_Gauge.xml" />
+    <None Include="Assets\Randy\0394_Vacuum_Cut.xml" />
+    <None Include="Assets\Randy\0395_Reviver.xml" />
+    <None Include="Assets\Randy\0396_Shocker.xml" />
+    <None Include="Assets\Randy\0397_Echo.xml" />
+    <None Include="Assets\Randy\0398_Famish.xml" />
+    <None Include="Assets\Randy\0399_One_Room.xml" />
+    <None Include="Assets\Randy\0400_Fill_In.xml" />
+    <None Include="Assets\Randy\0401_Trapper.xml" />
+    <None Include="Assets\Randy\0402_Possess.xml" />
+    <None Include="Assets\Randy\0403_Itemize.xml" />
+    <None Include="Assets\Randy\0404__M_D1_.xml" />
+    <None Include="Assets\Randy\0405_projectile.xml" />
+    <None Include="Assets\Randy\0406_Hurl.xml" />
+    <None Include="Assets\Randy\0407_Mobile.xml" />
+    <None Include="Assets\Randy\0408_Item_Toss.xml" />
+    <None Include="Assets\Randy\0409_See_Stairs.xml" />
+    <None Include="Assets\Randy\0410_Long_Toss.xml" />
+    <None Include="Assets\Randy\0411__M_D1_.xml" />
+    <None Include="Assets\Randy\0412_Pierce.xml" />
+    <None Include="Assets\Randy\0413__M_D1_.xml" />
+    <None Include="Assets\Randy\0414__M_D1_.xml" />
+    <None Include="Assets\Randy\0415__M_D1_.xml" />
+    <None Include="Assets\Randy\0416__M_D1_.xml" />
+    <None Include="Assets\Randy\0417__M_D1_.xml" />
+    <None Include="Assets\Randy\0418__M_D1_.xml" />
+    <None Include="Assets\Randy\0419__M_D1_.xml" />
+    <None Include="Assets\Randy\0420__M_D1_.xml" />
+    <None Include="Assets\Randy\0421__M_D1_.xml" />
+    <None Include="Assets\Randy\0422__M_D1_.xml" />
+    <None Include="Assets\Randy\0423__M_D1_.xml" />
+    <None Include="Assets\Randy\0424__M_D1_.xml" />
+    <None Include="Assets\Randy\0425__M_D1_.xml" />
+    <None Include="Assets\Randy\0426__M_D1_.xml" />
+    <None Include="Assets\Randy\0427__M_D1_.xml" />
+    <None Include="Assets\Randy\0428__M_D1_.xml" />
+    <None Include="Assets\Randy\0429__M_D1_.xml" />
+    <None Include="Assets\Randy\0430_Hammer_Arm.xml" />
+    <None Include="Assets\Randy\0431_Iron_Head.xml" />
+    <None Include="Assets\Randy\0432_Aqua_Jet.xml" />
+    <None Include="Assets\Randy\0433_Aqua_Tail.xml" />
+    <None Include="Assets\Randy\0434_Aqua_Ring.xml" />
+    <None Include="Assets\Randy\0435_Spacial_Rend.xml" />
+    <None Include="Assets\Randy\0436_Dark_Pulse.xml" />
+    <None Include="Assets\Randy\0437_Ominous_Wind.xml" />
+    <None Include="Assets\Randy\0438_Gastro_Acid.xml" />
+    <None Include="Assets\Randy\0439_Healing_Wish.xml" />
+    <None Include="Assets\Randy\0440_Close_Combat.xml" />
+    <None Include="Assets\Randy\0441_Wood_Hammer.xml" />
+    <None Include="Assets\Randy\0442_Air_Slash.xml" />
+    <None Include="Assets\Randy\0443_Energy_Ball.xml" />
+    <None Include="Assets\Randy\0444_Tailwind.xml" />
+    <None Include="Assets\Randy\0445_Punishment.xml" />
+    <None Include="Assets\Randy\0446_Chatter.xml" />
+    <None Include="Assets\Randy\0447_Lucky_Chant.xml" />
+    <None Include="Assets\Randy\0448_Guard_Swap.xml" />
+    <None Include="Assets\Randy\0449_Heal_Order.xml" />
+    <None Include="Assets\Randy\0450_Heal_Block.xml" />
+    <None Include="Assets\Randy\0451_Shadow_Sneak.xml" />
+    <None Include="Assets\Randy\0452_Thunder_Fang.xml" />
+    <None Include="Assets\Randy\0453_Rock_Wrecker.xml" />
+    <None Include="Assets\Randy\0454_Focus_Blast.xml" />
+    <None Include="Assets\Randy\0455_Giga_Impact.xml" />
+    <None Include="Assets\Randy\0456_Defog.xml" />
+    <None Include="Assets\Randy\0457_Trump_Card.xml" />
+    <None Include="Assets\Randy\0458_Grass_Knot.xml" />
+    <None Include="Assets\Randy\0459_Cross_Poison.xml" />
+    <None Include="Assets\Randy\0460_Attack_Order.xml" />
+    <None Include="Assets\Randy\0461_Ice_Fang.xml" />
+    <None Include="Assets\Randy\0462_Ice_Shard.xml" />
+    <None Include="Assets\Randy\0463_Psycho_Cut.xml" />
+    <None Include="Assets\Randy\0464_Psycho_Shift.xml" />
+    <None Include="Assets\Randy\0465_Me_First.xml" />
+    <None Include="Assets\Randy\0466_Embargo.xml" />
+    <None Include="Assets\Randy\0467____.xml" />
+    <None Include="Assets\Randy\0468_Seed_Flare.xml" />
+    <None Include="Assets\Randy\0469_Brine.xml" />
+    <None Include="Assets\Randy\0470_X_Scissor.xml" />
+    <None Include="Assets\Randy\0471_Natural_Gift.xml" />
+    <None Include="Assets\Randy\0472_Payback.xml" />
+    <None Include="Assets\Randy\0473_Zen_Headbutt.xml" />
+    <None Include="Assets\Randy\0474_Wring_Out.xml" />
+    <None Include="Assets\Randy\0475_Gyro_Ball.xml" />
+    <None Include="Assets\Randy\0476_Shadow_Claw.xml" />
+    <None Include="Assets\Randy\0477_Shadow_Force.xml" />
+    <None Include="Assets\Randy\0478_Gravity.xml" />
+    <None Include="Assets\Randy\0479_Vacuum_Wave.xml" />
+    <None Include="Assets\Randy\0480_Stealth_Rock.xml" />
+    <None Include="Assets\Randy\0481_Stone_Edge.xml" />
+    <None Include="Assets\Randy\0482_Switcheroo.xml" />
+    <None Include="Assets\Randy\0483_Dark_Void.xml" />
+    <None Include="Assets\Randy\0484_Earth_Power.xml" />
+    <None Include="Assets\Randy\0485_Gunk_Shot.xml" />
+    <None Include="Assets\Randy\0486_Seed_Bomb.xml" />
+    <None Include="Assets\Randy\0487_Double_Hit.xml" />
+    <None Include="Assets\Randy\0488_Assurance.xml" />
+    <None Include="Assets\Randy\0489_Charge_Beam.xml" />
+    <None Include="Assets\Randy\0490_Pluck.xml" />
+    <None Include="Assets\Randy\0491_Night_Slash.xml" />
+    <None Include="Assets\Randy\0492_Acupressure.xml" />
+    <None Include="Assets\Randy\0493_Magnet_Rise.xml" />
+    <None Include="Assets\Randy\0494_Roar_of_Time.xml" />
+    <None Include="Assets\Randy\0495_Poison_Jab.xml" />
+    <None Include="Assets\Randy\0496_Toxic_Spikes.xml" />
+    <None Include="Assets\Randy\0497_Last_Resort.xml" />
+    <None Include="Assets\Randy\0498_Dragon_Rush.xml" />
+    <None Include="Assets\Randy\0499_Trick_Room.xml" />
+    <None Include="Assets\Randy\0500_Drain_Punch.xml" />
+    <None Include="Assets\Randy\0501_Mud_Bomb.xml" />
+    <None Include="Assets\Randy\0502_U_turn.xml" />
+    <None Include="Assets\Randy\0503_Fling.xml" />
+    <None Include="Assets\Randy\0504_Worry_Seed.xml" />
+    <None Include="Assets\Randy\0505_Crush_Grip.xml" />
+    <None Include="Assets\Randy\0506_Heart_Swap.xml" />
+    <None Include="Assets\Randy\0507_Force_Palm.xml" />
+    <None Include="Assets\Randy\0508_Aura_Sphere.xml" />
+    <None Include="Assets\Randy\0509_Roost.xml" />
+    <None Include="Assets\Randy\0510_Bullet_Punch.xml" />
+    <None Include="Assets\Randy\0511_Power_Whip.xml" />
+    <None Include="Assets\Randy\0512_Power_Gem.xml" />
+    <None Include="Assets\Randy\0513_Power_Swap.xml" />
+    <None Include="Assets\Randy\0514_Power_Trick.xml" />
+    <None Include="Assets\Randy\0515_Sucker_Punch.xml" />
+    <None Include="Assets\Randy\0516_Feint.xml" />
+    <None Include="Assets\Randy\0517_Flare_Blitz.xml" />
+    <None Include="Assets\Randy\0518_Brave_Bird.xml" />
+    <None Include="Assets\Randy\0519_Lava_Plume.xml" />
+    <None Include="Assets\Randy\0520_Defend_Order.xml" />
+    <None Include="Assets\Randy\0521_Discharge.xml" />
+    <None Include="Assets\Randy\0522_Fire_Fang.xml" />
+    <None Include="Assets\Randy\0523_Magnet_Bomb.xml" />
+    <None Include="Assets\Randy\0524_Magma_Storm.xml" />
+    <None Include="Assets\Randy\0525_Copycat.xml" />
+    <None Include="Assets\Randy\0526_Lunar_Dance.xml" />
+    <None Include="Assets\Randy\0527_Mirror_Shot.xml" />
+    <None Include="Assets\Randy\0528_Miracle_Eye.xml" />
+    <None Include="Assets\Randy\0529_Bug_Bite.xml" />
+    <None Include="Assets\Randy\0530_Bug_Buzz.xml" />
+    <None Include="Assets\Randy\0531_Wake_Up_Slap.xml" />
+    <None Include="Assets\Randy\0532_Metal_Burst.xml" />
+    <None Include="Assets\Randy\0533_Head_Smash.xml" />
+    <None Include="Assets\Randy\0534_Captivate.xml" />
+    <None Include="Assets\Randy\0535_Avalanche.xml" />
+    <None Include="Assets\Randy\0536_Flash_Cannon.xml" />
+    <None Include="Assets\Randy\0537_Leaf_Storm.xml" />
+    <None Include="Assets\Randy\0538_Draco_Meteor.xml" />
+    <None Include="Assets\Randy\0539_Dragon_Pulse.xml" />
+    <None Include="Assets\Randy\0540_Rock_Polish.xml" />
+    <None Include="Assets\Randy\0541_Rock_Climb.xml" />
+    <None Include="Assets\Randy\0542_Nasty_Plot.xml" />
+    <None Include="Assets\Randy\0543__M_D1_.xml" />
+    <None Include="Assets\Randy\0544__M_D1_.xml" />
+    <None Include="Assets\Randy\0545__M_D1_.xml" />
+    <None Include="Assets\Randy\0546__M_D1_.xml" />
+    <None Include="Assets\Randy\0547__M_D1_.xml" />
+    <None Include="Assets\Randy\0548__M_D1_.xml" />
+    <None Include="Assets\Randy\0549__M_D1_.xml" />
+    <None Include="Assets\Randy\0550__M_D1_.xml" />
+    <None Include="Assets\Randy\0551__M_D1_.xml" />
+    <None Include="Assets\Randy\0552__M_D1_.xml" />
+    <None Include="Assets\Randy\0553__M_D1_.xml" />
+    <None Include="Assets\Randy\0554__M_D1_.xml" />
+    <None Include="Assets\Randy\0555__M_D1_.xml" />
+    <None Include="Assets\Randy\0556__M_D1_.xml" />
+    <None Include="Assets\Randy\0557__M_D1_.xml" />
+    <None Include="Assets\Randy\0558__M_D1_.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
+</Project>
